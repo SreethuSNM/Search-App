@@ -1,0 +1,37 @@
+/* Navbar styles */
+.nav {
+    background-color: #0A081B;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+  }
+  
+  
+  /* Help section */
+  .help-section {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 40px;
+    color: white;
+  }
+  
+  .help-section:hover {
+    color: white;
+  }
+  
+  /* Help icon */
+  .help-icon {
+    margin-right: 5px;
+    font-size: 16px;
+  }
+  

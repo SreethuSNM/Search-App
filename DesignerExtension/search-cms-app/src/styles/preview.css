@@ -1,0 +1,161 @@
+    /* Ensure parent `.preview-container` doesn’t force expansion */
+    .preview-containers {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: #8B77F933;
+        padding: 16px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        min-height: 300px;
+    }
+
+    /* Ensure child elements stay within max-width */
+    .preview-header,
+    .search-container,
+    .search-results {
+        max-width: 100%; /* Prevent overflow */
+    }
+
+
+    .preview-title{
+        margin-left:12px;
+
+    }
+
+
+
+    /* Ensure `.preview-card` does not cut off content */
+    .preview-card {
+        width: 100%;
+        max-width: 470px;
+        max-height: 300px;
+        height: auto; /* Allow dynamic height */
+        background-color:white;
+        border: 1px solid rgba(140, 121, 255, 0.25);
+        padding: 20px;
+        border-radius:3px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Fix spacing */
+    }
+
+    .search-results {
+        width: 100%;
+        max-width: 100%;
+        max-height: 250px; /* Adjust this as needed */
+        overflow-y: auto; /* Enables scrolling */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: white; /* Remove red background */
+        border-radius: 5px;
+    }
+
+    /* Ensure each result item has proper spacing */
+    .result-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: white;
+        padding: 8px;
+        border-radius: 5px;
+        width: 100%;
+        border-bottom: 1px solid #ccc; /* Light gray instead of red */
+    }
+
+    /* Remove any unwanted red borders */
+    .result-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Image Placeholder */
+    .result-image {
+        width: 80px;
+        height: 80px;
+        background-color: #ccc;
+        border-radius: 5px;
+    }
+
+    /* Fix text block alignment */
+    .result-text {
+        flex-grow: 1;
+    }
+
+    .result-title,
+    .result-subtitle {
+        height: 16px;
+        background-color: #ddd;
+        border-radius: 5px;
+    }
+
+    .result-title {
+        width: 70%;
+    }
+
+    .result-subtitle {
+        width: 50%;
+        margin-top: 5px;
+    }
+    .search-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        background-color: rgba(221, 221, 221, 0.53);
+        padding: 5px;
+        border-radius: 5px;
+        width: 317px;  /* Set fixed width */
+        height: 25px; /* Set fixed height */
+        position: relative;
+    }
+
+    .search-input {
+        flex-grow: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: black;
+        padding: 5px;
+        font-size: 14px;
+        width: 100%;
+        height: 100%;
+        padding-right: 35px; /* Space for button */
+    }
+
+    .search-button {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px; 
+        height: 23px;
+    }
+
+    .search-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+
+
+

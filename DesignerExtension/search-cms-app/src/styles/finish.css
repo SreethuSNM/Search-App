@@ -1,0 +1,90 @@
+/* Finish Component Styles */
+.finish-container {
+
+  background-color: #0B0A1F;
+
+ 
+}
+
+/* Main Card */
+.finish-card {
+  background-color: rgba(139, 119, 249, 0.07);
+  max-width: 524px;
+  max-height: 460px;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(140, 121, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Icon Section */
+.icons-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.icon-union {
+  position: absolute;
+  width: 67px;
+  height: 54px;
+}
+
+.icon-large {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: -1px;
+  right: -1px;
+}
+
+.icon-small {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -8px;
+  right: -15px;
+}
+
+/* Text */
+.finish-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 16px;
+}
+
+.finish-text {
+    font-size: 12px;
+    font-weight: 400;
+  margin-top: 8px;
+  opacity: 0.6;
+}
+
+/* Button */
+.finish-button {
+  margin-top: 20px;
+  background-color: #262E84;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.finish-button:hover {
+  background-color: #3C3883;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "search-cms-app",
+  "publicDir": "public",
+ "size": "large",
+  "apiVersion": "2"
+}

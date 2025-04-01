@@ -1,0 +1,52 @@
+/* Background container */
+.container {
+
+    height: 100vh;
+    background-color: #0A081B;
+    
+  }
+  
+  .cards {
+    padding: 25px;
+  }
+  
+  .card {
+    background-color: #8B77F912;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 750px; /* Increased width to account for padding */
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Ensures padding is included in width */
+  }
+  
+  
+  
+  /* Checkmark icon */
+  .finalicon-container {
+    position: relative;
+    width: 80px;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ADD8E6;
+  
+    
+  }
+  
+  .icon-final{
+    width: 80px;
+    height: 82px;
+    
+  }
+  
+  
+  

@@ -1,0 +1,303 @@
+/* General Component Container */
+.component-container {
+  width: 524px;
+  height: 404px;
+  background-color: #8B77F912;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  padding: 6px;
+  border-radius: 8px;
+    
+  }
+  
+  .setup-wrapper {
+    background-color:#09071B;
+  
+  
+   
+  }
+  .separator-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2); /* Light line color */
+    border: none;
+    margin: 10px 0; /* Space above and below */
+  }
+  
+  
+  
+  
+  
+  
+  .choose-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    
+  }
+  
+  .continue-button {
+    background-color: #4A46A3;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+   
+  }
+  
+  .continue-button:hover {
+    background-color: #3C3883;
+  }
+  
+  
+  
+  /* Inner Container for Left & Right Sections */
+  .inner-container {
+    display: flex;
+    height: 100%;
+  }
+  
+  /* Left Section: Settings */
+  .settings-container {
+    flex: 1;
+    background-color: #16132E;
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 12px;
+  }
+  
+  /* Right Section: Preview */
+  .preview-container {
+    flex: 1;
+    background-color: rgba(139, 119, 249, 0.2);
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Highlight Text */
+  .text-highlight {
+    color: #8C79FF;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .radio-groups {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    font-weight:400;
+    opacity: 0.6;
+  }
+  
+  .radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+  }
+  
+  /* Hide the default radio button */
+  .radio-label input[type="radio"] {
+    display: none;
+  }
+  
+  /* Custom radio button */
+  .radio-circle {
+    width: 15px;
+    height: 15px;
+    border: 1.5px solid #8C79FF; /* Outer border color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Inner filled circle when selected */
+  .radio-label input[type="radio"]:checked + .radio-circle::before {
+    content: "";
+    width: 8px; /* Adjust size of inner circle */
+    height: 8px;
+    background-color: #8C79FF; /* Inner circle color */
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  /* Display Mode Toggle */
+  .display-toggle {
+    display: flex;
+    gap: 8px;
+    color: #ffffff;
+    font-weight: 400;
+    
+  }
+  
+  .toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #24214D;
+    color:#FFFF;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid transparent;
+  }
+  
+  .toggle-btn.active {
+    background-color: #8C79FF;
+    border-color: #6a5acd;
+  }
+
+  .toggle-btn:hover .text {
+    color: #FFFFFF !important; 
+}
+
+.toggle-btn.active .text {
+    color: #FFFFFF !important; 
+}
+
+  
+  .list-container {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .list-title {
+    margin-right: 16px;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: 400;
+    opacity: 0.6;
+  }
+  
+  .dropdown {
+    padding: 8px;
+
+    border: 1px solid #33304A;
+     color: #FFFFFF;
+    cursor: pointer;
+    background-color: #24214D;
+     padding: 6px 10px;
+    border-radius: 3px;
+  }
+  
+  .dropdown:hover {
+    background-color: #52527a;
+  }
+  
+  
+  
+  /* Grid Options */
+  .grid-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 8px;
+    color: #ffffff;
+    font-weight: 400;
+    opacity: 0.6;
+  }
+  
+  .grid-setting {
+    display: flex;
+align-items: center;
+    gap: 4px;
+  }
+  
+  
+
+  
+  /* Misc Text Styling */
+  .text {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 400;
+    opacity:0.6;
+  }
+  
+
+  .preview-container {
+    background-color: rgba(139, 119, 249, 0.2);
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+  }
+  
+  .preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps "Preview" on the left and button on the right */
+    width: 100%;
+  }
+  
+  .preview-title {
+    font-size: 14px;
+    font-weight: normal;
+    color: #FFFFFF;
+    margin: 0; /* Ensure there's no unwanted centering */
+    text-align: left; /* Explicitly align text to the left */
+  }
+  
+  .maximize-button {
+    background-color: #4a4a4a;
+    padding: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    margin-right: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .maximize-button:hover {
+    background-color: #666;
+  }
+  
+  .maximize-icon {
+    width: 18px;
+    height: 18px;
+    
+  }
+  
+  
+  .preview-content {
+    margin-top: 10px;
+    width: 191px;  /* Set fixed width */
+    background-color:#FFFFFF;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #4a4a4a;
+    min-height: 250px;
+  }
+  
+  .preview-footer {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    background-color: #0A081B;
+    font-size: 10px;
+    opacity: 0.6;
+    padding: 8px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    width: 100%; /* Make it full width */
+  }
+  
+  .info-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+  }
+  
+  

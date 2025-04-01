@@ -1,0 +1,208 @@
+.choose-container {
+  width: 524px;
+  height: 404px;
+  background-color: #8B77F912;
+  color: white;
+  
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.choose-wrapper {
+  background-color:#09071B;
+
+
+ 
+}
+.separator-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2); /* Light line color */
+  border: none;
+  margin: 10px 0; /* Space above and below */
+}
+
+
+
+
+
+
+.choose-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  gap: 10px;
+  
+}
+
+.authorize-button{
+  background-color:#3C3883;
+
+}
+
+.continue-button {
+  background-color: #262E84;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+ 
+}
+
+.continue-button:hover {
+  background-color: #3C3883;
+}
+/* 
+.selection-item,
+.selection-header label {
+
+} */
+
+
+
+.choose-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.choose-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 40px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+/* Hide the default radio button */
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+/* Custom radio button */
+.radio-circle {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid #8C79FF; /* Outer border color */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Inner filled circle when selected */
+.radio-label input[type="radio"]:checked + .radio-circle::before {
+  content: "";
+  width: 8px; /* Adjust size of inner circle */
+  height: 8px;
+  background-color: #8C79FF; /* Inner circle color */
+  border-radius: 50%;
+  position: absolute;
+}
+
+
+.selection-boxes {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.selection-card {
+  flex: 1;
+  background-color: #1C1935;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid gray;
+}
+
+.selection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.selection-header h2 {
+  font-size: 14px;
+}
+.selection-header label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adjust space between checkbox and text */
+  cursor: pointer;
+}
+.selection-item span {
+  opacity: 0.6;
+}
+
+.selection-item:hover {
+  background-color: #8C79FF; 
+  color: white; 
+}
+
+/* Also ensure the text inside is affected */
+.selection-item:hover span {
+  opacity: 1;
+  color: white;
+}
+
+.selection-item{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  
+  padding: 8px;
+  background-color: #191634;
+  border: 1px solid #8B77F9;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.selection-item input[type="checkbox"],
+.selection-header input[type="checkbox"] {
+  appearance: none; /* Remove default checkbox */
+  width: 16px;
+  height: 16px;
+  background-color: #8C79FF; /* Background color */
+  border-radius: 4px; /* Optional: rounded corners */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  color:white;
+}
+
+.selection-item input[type="checkbox"]:checked::before,
+.selection-header input[type="checkbox"]:checked::before {
+  content: "";
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='none' stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center center;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
