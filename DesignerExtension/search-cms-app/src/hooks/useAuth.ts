@@ -5,10 +5,10 @@ import { jwtDecode } from "jwt-decode";
 
 import { User, DecodedToken} from "../types/types";
 
+const base_url ="http://localhost:3000";
 
-const base_url = import.meta.env.VITE_NEXTJS_API_URL;
 
-console.log(import.meta.env);
+
 
 interface AuthState {
   user: User;
@@ -96,10 +96,16 @@ export function useAuth() {
   // Function to trigger token exchange
   const exchangeAndVerifyIdToken = async (idToken: string) => {
     try {
+      // Trigger the mutation to exchange and verify the token
       await tokenMutation.mutateAsync(idToken);
+      console.log("Token exchange successful!");
     } catch (error) {
       console.error("Error exchanging token:", error);
+
+      // Clear local storage if an error occurs
       localStorage.removeItem("wf_hybrid_user");
+
+     
     }
   };
 

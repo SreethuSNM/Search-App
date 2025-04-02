@@ -31,6 +31,8 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const code = searchParams.get("code");
 
+  console.log("Authorization code received:", code);
+
   // If no code, return a 400 error
   if (!code) {
     return NextResponse.json({ error: "No code provided" }, { status: 400 });
@@ -73,7 +75,12 @@ export async function GET(request: NextRequest) {
           </head>
           <body>
             <script>
-              window.opener.postMessage('authComplete', '*');
+           // First, send the authorization code to the parent window
+          window.opener.postMessage({ authorizationCode: '${code}' }, '*');
+          
+          // Then, send a message indicating that the authentication process is complete
+          window.opener.postMessage('authComplete', '*');
+          // Close the popup window
               window.close();
             </script>
           </body>

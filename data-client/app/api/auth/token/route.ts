@@ -54,6 +54,12 @@ export async function POST(request: NextRequest) {
     console.log("Request body:", body);
     const token = body.idToken;
 
+    // Ensure the idToken exists
+    if (!token) {
+      return NextResponse.json({ error: "Missing ID Token in the request" }, { status: 400 });
+    }
+
+
     // Verify the ID Token with Webflow's API
     const response = await fetch("https://api.webflow.com/beta/token/resolve", {
       method: "POST",

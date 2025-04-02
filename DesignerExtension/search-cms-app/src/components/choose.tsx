@@ -17,36 +17,62 @@ export default function Choose({ setActiveComponent }) {
   const [selectAllFields, setSelectAllFields] = useState(true);
   const [option, setOption] = useState("Collection");
 
+ 
   const openAuthScreen = () => {
     console.log("Opening Webflow authentication window...");
-
-    console.log(import.meta.env.VITE_NEXTJS_API_URL);
-
-    const base_url = import.meta.env.VITE_NEXTJS_API_URL || 'http://localhost:3000';
-
-// Use the environment variable in the URL
-const authWindow = window.open(
-  `${base_url}/api/auth/authorize?state=webflow_designer`,
-  "_blank",
-  "width=600,height=600"
-);
+    const base_url = "http://localhost:3000";
+  
+    // Open the authentication window
+    const authWindow = window.open(
+      `${base_url}/api/auth/authorize?state=webflow_designer`,
+      "_blank",
+      "width=600,height=600"
+    );
+  
+    // Check if the window has closed
     const checkWindow = setInterval(() => {
       if (authWindow?.closed) {
         console.log("Auth window closed");
         clearInterval(checkWindow);
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const authorizationCode = urlParams.get("code");
-
-        if (authorizationCode) {
-          exchangeAndVerifyIdToken(authorizationCode);
-        } else {
+  
+        // Get the URL parameters in the current window (after the popup closes)
+        const searchParams = new URLSearchParams(window.location.search);
+        console.log("Full URL parameters:", searchParams.toString());  // Logs all query params
+        const code = searchParams.get("code");
+  
+        if (!code) {
           console.error("Authorization code not found.");
+        } else {
+          console.log("Authorization code received:", code);
+          exchangeAndVerifyIdToken(code);  // Use the received authorization code
         }
       }
     }, 1000);
+  
+    // Listen for the message from the popup
+    window.addEventListener("message", (event) => {
+      // Log the event to verify the message origin and content
+      console.log("Received message from popup:", event);
+  
+      if (event.origin !== "http://localhost:3000") {
+        console.error("Unexpected origin: ", event.origin);
+        return;
+      }
+  
+      // If the message contains the authorization code, process it
+      if (event.data && event.data.authorizationCode) {
+        const authorizationCode = event.data.authorizationCode;
+        console.log("Authorization code from popup:", authorizationCode);
+  
+        if (authorizationCode) {
+          exchangeAndVerifyIdToken(authorizationCode);  // Use the authorization code
+        } else {
+          console.error("Authorization code missing in message data.");
+        }
+      }
+    });
   };
-
+  
 
 
 
